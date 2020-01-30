@@ -1,6 +1,7 @@
 package com.thebeastshop.aspectlog.main;
 
 import com.thebeastshop.aspectlog.annotation.AspectLog;
+import com.thebeastshop.aspectlog.context.AspectLogContext;
 import com.thebeastshop.aspectlog.vo.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,5 +25,10 @@ public class Demo {
     @AspectLog({"person.id","person.age","person.company.department.dptId"})
     public void demo3(Person person){
         log.info("多层级示例");
+    }
+
+    public void demo4(){
+        AspectLogContext.putLogValue("[SO1001]");
+        log.info("代码控制示例");
     }
 }
