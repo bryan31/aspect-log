@@ -54,5 +54,6 @@
         <module>aspect-log-spring-boot-starter</module>
         <module>aspect-log-test-logback</module>
         <module>aspect-log-test-log4j</module>
+        <module>aspect-log-test-log4j2</module>
     </modules>
 </project>
