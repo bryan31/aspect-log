@@ -15,6 +15,7 @@ public class Demo {
     @AspectLog({"id"})
     public void demo1(String id,String name){
         log.info("最基本的示例");
+        new Thread(() -> log.info("这是异步日志")).start();
     }
 
     @AspectLog(value = {"id","name"},pattern = "<-{}->",joint = "_")

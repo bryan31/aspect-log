@@ -12,9 +12,10 @@ public class Demo {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
-    @AspectLog({"id"})
+    @AspectLog({"id","name"})
     public void demo1(String id,String name){
         log.info("最基本的示例");
+        new Thread(() -> log.info("这是异步日志")).start();
     }
 
     @AspectLog(value = {"id","name"},pattern = "<-{}->",joint = "_")

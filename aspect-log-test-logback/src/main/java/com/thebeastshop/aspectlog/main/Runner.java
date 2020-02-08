@@ -9,8 +9,9 @@ import javax.annotation.PostConstruct;
 @SpringBootApplication
 public class Runner {
 
+    static {AspectLogEnhance.enhance();}
+
     public static void main(String[] args) {
-        AspectLogEnhance.enhance();
         try {
             SpringApplication.run(Runner.class, args);
         } catch (Throwable e) {
