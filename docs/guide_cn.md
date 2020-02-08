@@ -98,7 +98,7 @@ public class Runner {
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration>
     <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
-				<layout class="com.thebeastshop.aspectlog.enhance.log4j.AspectLog4jPatternLayout">
+		<layout class="com.thebeastshop.aspectlog.enhance.log4j.AspectLog4jPatternLayout">
             <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %m  >> %c:%L%n"/>
         </layout>
     </appender>
