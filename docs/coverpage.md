@@ -1,4 +1,4 @@
-![logo](_media/logo.png)
+![logo](media/logo.png)
 > 一个超好用的可以加上自己业务数据的日志切面框架
 
 # aspect-log
