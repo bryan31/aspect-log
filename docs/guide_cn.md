@@ -277,5 +277,5 @@ public void demo(){
 
 
 # 7.联系作者
-![logo](media/wx.jpeg)
+![wx](media/wx.jpeg)
 
