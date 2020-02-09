@@ -9,7 +9,7 @@ import java.net.URL;
 /**
  * @author Bryan.Zhang
  * @Date 2020/1/16
- * 利用javassit进行对logback进行切面增强
+ * 利用javassit进行对LOG框架进行切面增强
  */
 public class AspectLogEnhance {
 
