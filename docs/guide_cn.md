@@ -276,5 +276,6 @@ public void demo(){
 
 
 
-## 7.联系作者
+# 7.联系作者
+![logo](media/wx.jpeg)
 

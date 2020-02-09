@@ -8,7 +8,7 @@ Aspect-log是一个日志切面框架，能通过简单的配置在你的日志�
 * 在方法上配置，无论调用多深或者异步调用。也可以统一加上业务标识
 * 完全无性能损耗
 
-## 详细文档请点击：[中文文档](http://bryan31.gitee.io/aspect-log)
+## 详细文档请点击：[中文文档](https://bryan31.gitee.io/aspect-log)
 
 ## 效果简单示例
 ```java
