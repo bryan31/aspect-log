@@ -10,23 +10,3 @@ Aspect-log是一个日志切面框架，能通过简单的配置在你的日志�
 
 ## 详细文档请点击：[中文文档](https://bryan31.gitee.io/aspect-log)
 
-## 效果简单示例
-```java
-@AspectLog({"id"})
-public void demo1(String id,String name){
-  log.info("这是第一条日志");
-  log.info("这是第二条日志");
-  log.info("这是第三条日志");
-  new Thread(() -> log.info("这是异步日志")).start();
-}
-```
-
-假设id的值为'NO1234'，日志打出来的样子如下：
-
-```
-2020-02-08 20:22:33.945 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234] 这是第一条日志
-2020-02-08 20:22:33.945 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234] 这是第二条日志
-2020-02-08 20:22:33.945 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234] 这是第三条日志
-2020-02-08 20:22:33.948 [Thread-3] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234] 这是异步日志
-```
-
