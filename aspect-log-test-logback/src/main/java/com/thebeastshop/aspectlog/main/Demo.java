@@ -28,7 +28,12 @@ public class Demo {
         log.info("多层级示例");
     }
 
-    public void demo4(){
+    @AspectLog(convert = CustomAspectLogConvert.class)
+    public void demo4(Person person){
+        log.info("自定义Convert示例");
+    }
+
+    public void demo5(){
         AspectLogContext.putLogValue("[SO1001]");
         log.info("代码控制示例");
     }

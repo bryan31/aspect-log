@@ -1,5 +1,7 @@
 package com.thebeastshop.aspectlog.annotation;
 
+import com.thebeastshop.aspectlog.convert.AspectLogConvert;
+
 import java.lang.annotation.*;
 
 /**
@@ -13,10 +15,12 @@ import java.lang.annotation.*;
 @Documented
 public @interface AspectLog {
 
-    String[] value();
+    String[] value() default {};
 
     String joint() default "-";
 
     String pattern() default "[{}]";
+
+    Class<? extends AspectLogConvert> convert() default AspectLogConvert.class;
 
 }

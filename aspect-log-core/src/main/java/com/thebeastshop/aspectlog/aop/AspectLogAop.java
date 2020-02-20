@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import com.sun.javafx.binding.StringFormatter;
 import com.thebeastshop.aspectlog.annotation.AspectLog;
 import com.thebeastshop.aspectlog.context.AspectLogContext;
+import com.thebeastshop.aspectlog.convert.AspectLogConvert;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -48,15 +49,26 @@ public class AspectLogAop {
         String[] aspectExpressions = aspectLog.value();
         String aspLogValuePattern = aspectLog.pattern().replaceAll("\\{\\}","{0}");
         String joint = aspectLog.joint();
+        Class<? extends AspectLogConvert> convertClazz = aspectLog.convert();
 
         StringBuilder sb = new StringBuilder();
-        for (String aspectExpression : aspectExpressions){
-            String aspLogValueItem = getExpressionValue(aspectExpression,paramNameValueMap);
-            if(StringUtils.isNotBlank(aspLogValueItem)){
-                sb.append(aspLogValueItem);
-                sb.append(joint);
+        if(!convertClazz.equals(AspectLogConvert.class)){
+            AspectLogConvert convert = convertClazz.newInstance();
+            try{
+                sb.append(convert.convert(args));
+            }catch (Throwable t){
+                log.error("[AspectLog]some errors happens in AspectLog's convert",t);
+            }
+        }else{
+            for (String aspectExpression : aspectExpressions){
+                String aspLogValueItem = getExpressionValue(aspectExpression,paramNameValueMap);
+                if(StringUtils.isNotBlank(aspLogValueItem)){
+                    sb.append(aspLogValueItem);
+                    sb.append(joint);
+                }
             }
         }
+
         String aspLogValue = sb.toString();
         if(StringUtils.isNotBlank(aspLogValue)){
             aspLogValue = aspLogValue.substring(0,aspLogValue.length()-1);

@@ -22,7 +22,8 @@ public class TestCommandRunner implements CommandLineRunner {
         demo.demo1("NO1234","jenny");
         demo.demo2("NO1234","jenny");
         demo.demo3(initTestPerson());
-        demo.demo4();
+        demo.demo4(initTestPerson());
+        demo.demo5();
     }
 
     private Person initTestPerson(){

@@ -7,7 +7,7 @@
     <groupId>com.thebeastshop</groupId>
     <artifactId>aspect-log</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -56,4 +56,19 @@
         <module>aspect-log-test-log4j</module>
         <module>aspect-log-test-log4j2</module>
     </modules>
+
+    <!--
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>nexus-releases</name>
+            <url>http://118.178.236.200:8087/nexus/content/repositories/thirdparty</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>nexus-snapshots</name>
+            <url>http://118.178.236.200:8087/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    -->
 </project>

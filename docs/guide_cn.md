@@ -30,7 +30,7 @@ Aspect-log是一个日志切面框架，能通过简单的配置在你的日志�
 </dependency>
 ```
 
-version为<font color=red>**1.0**</font>，目前中央仓库没有上传，需要自己编译打包
+最新version为<font color=red>**1.1**</font>，目前中央仓库没有上传，需要自己编译打包
 
 
 
@@ -46,7 +46,7 @@ version为<font color=red>**1.0**</font>，目前中央仓库没有上传，需�
 </dependency>
 ```
 
-version为<font color=red>**1.0**</font>，目前中央仓库没有上传，需要自己编译打包
+最新version为<font color=red>**1.1**</font>，目前中央仓库没有上传，需要自己编译打包
 
 
 
@@ -250,6 +250,33 @@ public void demo(Person person){
 
 
 
+> `@AspectLog`支持自定义Convert，适用于更复杂的业务场景
+
+```java
+@AspectLog(convert = CustomAspectLogConvert.class)
+public void demo(Person person){
+  log.info("自定义Convert示例");
+}
+```
+
+```java
+public class CustomAspectLogConvert implements AspectLogConvert {
+    @Override
+    public String convert(Object[] args) {
+        Person person = (Person)args[0];
+        return "PERSON(" + person.getId() + ")";
+    }
+}
+```
+
+日志打印出来的样子如下：
+
+```
+2020-02-20 17:05:12.414 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [PERSON(31] 自定义Convert示例
+```
+
+
+
 > `@AspectLog`支持编程式设值
 
 ```java
@@ -270,7 +297,7 @@ public void demo(){
 # 6. 即将支持以下特性
 
 * javaagent方式配置支持，完全不侵入项目
-* 支持配置Converter，支持值的转换和计算
+* ~~支持配置Converter，支持值的转换和计算~~   <font color=green>[已实现]</font>
 * 支持更多的基础类型，支持json的打印
 * 支持log日志任意位置的配置
 
