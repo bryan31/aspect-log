@@ -30,7 +30,7 @@ Aspect-log是一个日志切面框架，能通过简单的配置在你的日志�
 </dependency>
 ```
 
-最新version为<font color=red>**1.1**</font>，目前中央仓库没有上传，需要自己编译打包
+最新version为<font color=red>**1.2**</font>，为稳定版本，中央仓库已上传，可以依赖到
 
 
 
