@@ -7,7 +7,6 @@ import org.apache.log4j.spi.LoggingEvent;
 
 /**
  * @author Bryan.Zhang
- * @Date 2020/1/22
  */
 public class AspectLog4jPatternConverter extends PatternConverter {
     @Override

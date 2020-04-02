@@ -6,7 +6,6 @@ import java.lang.annotation.*;
 
 /**
  * @author Bryan.Zhang
- * @Date 2020/1/15
  * 切面日志注解
  */
 @Target({ElementType.METHOD})

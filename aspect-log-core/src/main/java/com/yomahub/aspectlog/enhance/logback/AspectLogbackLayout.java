@@ -4,7 +4,6 @@ import ch.qos.logback.classic.PatternLayout;
 
 /**
  * @author Bryan.Zhang
- * @Date 2020/1/19
  */
 public class AspectLogbackLayout extends PatternLayout {
     static {

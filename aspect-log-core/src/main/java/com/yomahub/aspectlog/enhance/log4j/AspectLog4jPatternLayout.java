@@ -5,7 +5,6 @@ import org.apache.log4j.helpers.PatternParser;
 
 /**
  * @author Bryan.Zhang
- * @Date 2020/1/22
  */
 public class AspectLog4jPatternLayout extends PatternLayout {
     @Override

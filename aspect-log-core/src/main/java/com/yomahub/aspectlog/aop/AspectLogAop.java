@@ -21,7 +21,6 @@ import java.util.Map;
 
 /**
  * @author Bryan.Zhang
- * @Date 2020/1/15
  * 注解切面，用于拦截@AspectLogAop
  */
 @Aspect

@@ -6,7 +6,6 @@ import com.yomahub.aspectlog.context.AspectLogContext;
 import org.apache.commons.lang3.StringUtils;
 /**
  * @author Bryan.Zhang
- * @Date 2020/1/19
  */
 public class AspectLogbackConverter extends ClassicConverter {
     @Override

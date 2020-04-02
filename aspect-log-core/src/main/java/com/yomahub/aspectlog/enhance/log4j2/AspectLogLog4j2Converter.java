@@ -33,7 +33,6 @@ import java.util.Locale;
 
 /**
  * @author Bryan.Zhang
- * @Date 2020/2/1
  */
 @Plugin(name = "AspectLogLog4j2Converter", category = PatternConverter.CATEGORY)
 @ConverterKeys({ "m", "msg", "message" })
