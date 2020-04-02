@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>aspect-log</artifactId>
-        <groupId>com.thebeastshop</groupId>
-        <version>1.1</version>
+        <groupId>com.yomahub</groupId>
+        <version>1.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.thebeastshop</groupId>
+            <groupId>com.yomahub</groupId>
             <artifactId>aspect-log-spring-boot-starter</artifactId>
             <version>${parent.version}</version>
         </dependency>

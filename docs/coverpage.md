@@ -4,5 +4,5 @@
 # **aspect-log**
 
 [Gitee](https://gitee.com/bryan31/aspect-log)
-[GitHub](https://github.com/thebeastshop/aspect-log)
+[GitHub](https://github.com/bryan31/aspect-log)
 [快速开始](#_1-介绍)

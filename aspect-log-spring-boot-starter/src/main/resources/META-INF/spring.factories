@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.thebeastshop.aspectlog.springboot.AspectLogConfiguration
+  com.yomahub.aspectlog.springboot.AspectLogConfiguration
 
 

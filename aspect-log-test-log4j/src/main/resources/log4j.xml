@@ -2,14 +2,14 @@
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration>
     <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
-        <!--<layout class="com.thebeastshop.aspectlog.enhance.log4j.AspectLog4jPatternLayout">-->
+        <!--<layout class="AspectLog4jPatternLayout">-->
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %m  >> %c:%L%n"/>
         </layout>
     </appender>
     <appender name="fileout" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" value="./logs/test.log"/>
-        <!--<layout class="com.thebeastshop.aspectlog.enhance.log4j.AspectLog4jPatternLayout">-->
+        <!--<layout class="AspectLog4jPatternLayout">-->
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %m  >> %c:%L%n"/>
         </layout>

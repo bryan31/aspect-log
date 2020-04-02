@@ -24,7 +24,7 @@ Aspect-log是一个日志切面框架，能通过简单的配置在你的日志�
 
 ```xml
 <dependency>
-  <groupId>com.thebeastshop</groupId>
+  <groupId>com.yomahub</groupId>
   <artifactId>aspect-log-spring-boot-starter</artifactId>
   <version>${version}</version>
 </dependency>
@@ -40,7 +40,7 @@ Aspect-log是一个日志切面框架，能通过简单的配置在你的日志�
 
 ```xml
 <dependency>
-  <groupId>com.thebeastshop</groupId>
+  <groupId>com.yomahub</groupId>
   <artifactId>aspect-log-core</artifactId>
   <version>${version}</version>
 </dependency>
@@ -102,7 +102,7 @@ public class Runner {
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration>
     <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
-		<layout class="com.thebeastshop.aspectlog.enhance.log4j.AspectLog4jPatternLayout">
+		<layout class="AspectLog4jPatternLayout">
             <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %m  >> %c:%L%n"/>
         </layout>
     </appender>
@@ -135,7 +135,7 @@ public class Runner {
     <property name="APP_NAME" value="logtest"/>
     <property name="LOG_HOME" value="./logs" />
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-		<encoder class="com.thebeastshop.aspectlog.enhance.logback.AspectLogbackEncoder">
+		<encoder class="AspectLogbackEncoder">
 			  <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
 		</encoder>
     </appender>
@@ -146,7 +146,7 @@ public class Runner {
             <MaxHistory>30</MaxHistory>
             <maxFileSize>1000MB</maxFileSize>
         </rollingPolicy>
-        <encoder class="com.thebeastshop.aspectlog.enhance.logback.AspectLogbackEncoder">
+        <encoder class="AspectLogbackEncoder">
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
         </encoder>
     </appender>
@@ -185,10 +185,10 @@ public void demo1(String id,String name){
 假设id的值为'NO1234'，日志打出来的样子如下：
 
 ```
-2020-02-08 20:22:33.945 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234] 这是第一条日志
-2020-02-08 20:22:33.945 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234] 这是第二条日志
-2020-02-08 20:22:33.945 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234] 这是第三条日志
-2020-02-08 20:22:33.948 [Thread-3] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234] 这是异步日志
+2020-02-08 20:22:33.945 [main] INFO  Demo - [NO1234] 这是第一条日志
+2020-02-08 20:22:33.945 [main] INFO  Demo - [NO1234] 这是第二条日志
+2020-02-08 20:22:33.945 [main] INFO  Demo - [NO1234] 这是第三条日志
+2020-02-08 20:22:33.948 [Thread-3] INFO  Demo - [NO1234] 这是异步日志
 ```
 
 
@@ -208,10 +208,10 @@ public void demo1(String id,String name){
 假设传入id的值为'NO1234'，name为'jenny'，日志打出来的样子如下：
 
 ```
-2020-02-08 22:09:40.101 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234-jenny] 这是第一条日志
-2020-02-08 22:09:40.101 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234-jenny] 这是第二条日志
-2020-02-08 22:09:40.102 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234-jenny] 这是第三条日志
-2020-02-08 22:09:40.103 [Thread-3] INFO  com.thebeastshop.aspectlog.main.Demo - [NO1234-jenny] 这是异步日志
+2020-02-08 22:09:40.101 [main] INFO  Demo - [NO1234-jenny] 这是第一条日志
+2020-02-08 22:09:40.101 [main] INFO  Demo - [NO1234-jenny] 这是第二条日志
+2020-02-08 22:09:40.102 [main] INFO  Demo - [NO1234-jenny] 这是第三条日志
+2020-02-08 22:09:40.103 [Thread-3] INFO  Demo - [NO1234-jenny] 这是异步日志
 ```
 
 
@@ -228,7 +228,7 @@ public void demo(String id,String name){
 日志打出来的样子如下：
 
 ```
-2020-02-08 22:09:40.103 [main] INFO  com.thebeastshop.aspectlog.main.Demo - <-NO1234_jenny-> 加了patter和joint的示例
+2020-02-08 22:09:40.103 [main] INFO  Demo - <-NO1234_jenny-> 加了patter和joint的示例
 ```
 
 
@@ -245,7 +245,7 @@ public void demo(Person person){
 日志打出来的样子如下：
 
 ```
-2020-02-08 22:09:40.110 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [31-25-80013] 多参数加多层级示例
+2020-02-08 22:09:40.110 [main] INFO  Demo - [31-25-80013] 多参数加多层级示例
 ```
 
 
@@ -272,7 +272,7 @@ public class CustomAspectLogConvert implements AspectLogConvert {
 日志打印出来的样子如下：
 
 ```
-2020-02-20 17:05:12.414 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [PERSON(31] 自定义Convert示例
+2020-02-20 17:05:12.414 [main] INFO  Demo - [PERSON(31] 自定义Convert示例
 ```
 
 
@@ -289,7 +289,7 @@ public void demo(){
 日志打出来的样子：
 
 ```
-2020-02-08 22:09:40.110 [main] INFO  com.thebeastshop.aspectlog.main.Demo - [SO1001] 代码控制示例
+2020-02-08 22:09:40.110 [main] INFO  Demo - [SO1001] 代码控制示例
 ```
 
 
