@@ -56,7 +56,7 @@ Aspect-log能给你的每条日志打上自定义业务标签，实现精确定�
 
 ## 4.1 一键配置方法
 
-这种方式用javassit实现，只需要一句话就可以实现。
+这种方式用javassit实现，只需要一句话就可以实现。自动识别了当前主流日志框架。
 
 ```java
 @SpringBootApplication
