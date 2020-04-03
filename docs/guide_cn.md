@@ -304,5 +304,5 @@ public void demo(){
 
 
 # 7.联系作者
-![wx](media/wx.jpeg)
+![offIical-wx](media/offIical-wx.jpg)
 
