@@ -102,7 +102,7 @@ public class Runner {
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration>
     <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
-		<layout class="AspectLog4jPatternLayout">
+		<layout class="com.yomahub.aspectlog.enhance.log4j.AspectLog4jPatternLayout">
             <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %m  >> %c:%L%n"/>
         </layout>
     </appender>
@@ -135,7 +135,7 @@ public class Runner {
     <property name="APP_NAME" value="logtest"/>
     <property name="LOG_HOME" value="./logs" />
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-		<encoder class="AspectLogbackEncoder">
+		<encoder class="com.yomahub.aspectlog.enhance.logback.AspectLogbackEncoder">
 			  <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
 		</encoder>
     </appender>
