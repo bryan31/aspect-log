@@ -19,7 +19,7 @@
         <commons-logging.version>1.2</commons-logging.version>
         <spring.version>5.0.9.RELEASE</spring.version>
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
-        <fastjson.version>1.2.7</fastjson.version>
+        <fastjson.version>1.2.25</fastjson.version>
         <dom4j.version>1.6.1</dom4j.version>
         <junit.version>4.12</junit.version>
         <javassist.version>3.22.0-GA</javassist.version>
