@@ -21,7 +21,7 @@
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
         <fastjson.version>1.2.7</fastjson.version>
         <dom4j.version>1.6.1</dom4j.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <javassist.version>3.22.0-GA</javassist.version>
         <aspectj.version>1.8.13</aspectj.version>
         <guava.version>19.0</guava.version>
