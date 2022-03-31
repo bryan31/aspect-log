@@ -17,7 +17,7 @@
         <commons.lang3.version>3.4</commons.lang3.version>
         <commons-collections.version>4.1</commons-collections.version>
         <commons-logging.version>1.2</commons-logging.version>
-        <spring.version>5.0.9.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
         <fastjson.version>1.2.7</fastjson.version>
         <dom4j.version>1.6.1</dom4j.version>
